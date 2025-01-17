@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Body Styling */
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: linear-gradient(135deg, #8cbce5, #add5fc); /* Subtle pastel gradient */
+        }
+        
+        /* Form Container */
+        form {
+          background: #ffffff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 400px;
+        }
+        
+        /* Form Title */
+        form h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 22px;
+          color: #333333;
+        }
+        
+        /* Labels */
+        label {
+          display: block;
+          margin-bottom: 6px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #555555;
+        }
+        
+        /* Input and Textarea Styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #cccccc;
+          border-radius: 8px;
+          font-size: 14px;
+          background-color: #f8f9fa;
+          color: #333333;
+          transition: all 0.3s ease;
+        }
+        
+        /* Input Focus */
+        input:focus,
+        textarea:focus,
+        select:focus {
+          border-color: #86a8e7;
+          outline: none;
+          box-shadow: 0 0 5px rgba(134, 168, 231, 0.5);
+          background: #ffffff;
+        }
+        
+        /* Password Container */
+        .password-container {
+          position: relative;
+        }
+        
+        .password-container input {
+          padding-right: 50px;
+        }
+        
+        .toggle-password {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #86a8e7;
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        /* Radio Button Group */
+        .radio-group {
+          margin-bottom: 15px;
+        }
+        
+        .radio-group label {
+          font-size: 14px;
+          font-weight: normal;
+          margin-right: 10px;
+          color: #444444;
+        }
+        
+        /* Checkbox */
+        input[type="checkbox"] {
+          margin-right: 6px;
+        }
+        
+        /* Textarea */
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+        
+        /* Dropdown Styling */
+        select {
+          appearance: none;
+          background-color: #f8f9fa;
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gray"><path fill-rule="evenodd" d="M5.292 7.708a1 1 0 011.414 0L10 11.001l3.293-3.293a1 1 0 111.414 1.415l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.415z" clip-rule="evenodd"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+          background-size: 15px;
+          padding-right: 30px;
+        }
+        
+        /* Submit Button */
+        button {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          background: linear-gradient(90deg, #a2fa68, #93fdcc);
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        /* Button Hover */
+        button:hover {
+          background: linear-gradient(90deg, #70ff1e, #96e786);
+          box-shadow: 0 4px 8px rgba(134, 168, 231, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+          form {
+            padding: 20px;
+          }
+        }
+        </style>
+        
+</head>
+<body>
+    <div class="form-container">
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a Password" required>
+        
+        <br><br>
+
+
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" name="nationality" required>
+        <option value="">Select your nationality</option>
+        <option value="pakistani">Pakistani</option>
+        <option value="american">American</option>
+        <option value="british">British</option>
+        <option value="canadian">Canadian</option>
+        <option value="indian">Indian</option>
+        </select>
+        <br><br>
+
+  
+        <label>Gender:</label>
+        <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+        </div>
+        <br><br>
+
+        <label for="Message">Message:</label>
+        <textarea name="Message"></textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    </div>
+</body>
+</html>
